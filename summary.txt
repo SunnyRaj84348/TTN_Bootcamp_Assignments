@@ -1,0 +1,4 @@
+Total Time: 25 ms
+log1.txt processed in 5 ms
+log2.txt processed in 3 ms
+log3.txt processed in 4 ms

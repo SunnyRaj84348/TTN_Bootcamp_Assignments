@@ -1,0 +1,4 @@
+INFO: Scheduled job started
+ERROR: Job execution failed
+INFO: Job completed with warnings
+ERROR: Insufficient memory

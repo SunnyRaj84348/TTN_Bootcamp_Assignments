@@ -1,0 +1,4 @@
+INFO: User login successful
+INFO: Loading dashboard
+ERROR: Failed to load user data
+ERROR: API request failed
