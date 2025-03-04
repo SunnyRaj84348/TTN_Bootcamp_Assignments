@@ -1,3 +1,13 @@
+// Write a Selenium Script and perform below operations.
+// 1. Open a Chrome Browser, and hit https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+// 2. Fetch and Print the text "Forgot your password?" visible on the page.
+// 3. By adding username and password
+// 4. Wait for the clickability of Login button
+// 5. Click on Login Button
+// 6. Fetch and Print title of the page.
+// 7. Print <h6> of the page that is text "Dashboard"
+// 8. Close the browser
+
 package march3;
 
 import org.openqa.selenium.*;
