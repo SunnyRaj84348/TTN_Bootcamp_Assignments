@@ -10,10 +10,12 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    public void login() {
+    public boolean login() {
         driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
         driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
 
         driver.findElement(By.xpath("//button[contains(@class, 'orangehrm-login-button')]")).click();
+
+        return driver.findElement(By.className("oxd-topbar-header")).isDisplayed();
     }
 }
