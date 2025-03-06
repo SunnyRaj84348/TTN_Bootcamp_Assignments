@@ -21,4 +21,10 @@ public class ClaimTest extends Base {
         boolean isSubmitted = claimPage.submitClaim();
         Assert.assertTrue(isSubmitted);
     }
+
+    @Test
+    public void testMyClaim() {
+        boolean refExists = claimPage.verifyClaim();
+        Assert.assertTrue(refExists);
+    }
 }

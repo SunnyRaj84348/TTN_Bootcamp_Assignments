@@ -52,8 +52,6 @@ public class ClaimPage {
     }
 
     public boolean submitClaim() {
-
-
         driver.findElement(By.xpath("//button[contains(@class,'orangehrm-sm-button')][3]")).click();
 
         var statusInp = driver.findElement(By.xpath("(//input[contains(@class,'oxd-input')])[4]"));
@@ -64,5 +62,12 @@ public class ClaimPage {
         });
 
         return !status.isEmpty();
+    }
+
+    public boolean verifyClaim() {
+        driver.findElement(By.xpath("(//a[contains(@class, 'oxd-topbar-body-nav-tab-item')])[2]")).click();
+        var refELem = driver.findElement(By.xpath("//div[contains(text(),'" + refID + "')]"));
+
+        return refELem.getText().equals(refID);
     }
 }
