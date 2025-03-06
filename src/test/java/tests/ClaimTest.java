@@ -1,12 +1,24 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.ClaimPage;
 
 public class ClaimTest extends Base {
+    ClaimPage claimPage;
+
     @Test
-    public void testClaim() {
-        ClaimPage claimPage = new ClaimPage(getDriver());
-        claimPage.submit();
+    public void testClaimCreation() {
+        claimPage = new ClaimPage(getDriver());
+        claimPage.navigateToClaim();
+        boolean isCreated = claimPage.createClaim();
+
+        Assert.assertTrue(isCreated);
+    }
+
+    @Test
+    public void testClaimSubmit() {
+        boolean isSubmitted = claimPage.submitClaim();
+        Assert.assertTrue(isSubmitted);
     }
 }
