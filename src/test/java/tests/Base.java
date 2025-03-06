@@ -2,8 +2,8 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import java.time.Duration;
 
@@ -14,7 +14,7 @@ public class Base {
         return driver;
     }
 
-    @BeforeClass
+    @BeforeTest
     public void setup() {
         if (driver == null) {
             driver = new ChromeDriver();
@@ -23,8 +23,8 @@ public class Base {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @AfterClass
+    @AfterTest
     public void cleanUp() {
-        //driver.quit();
+        driver.quit();
     }
 }
