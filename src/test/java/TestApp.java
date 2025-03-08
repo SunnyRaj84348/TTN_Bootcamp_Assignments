@@ -2,6 +2,7 @@ import apptest.Base;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.CartPage;
+import pages.CheckoutPage;
 import pages.LoginPage;
 
 public class TestApp extends Base {
@@ -18,5 +19,14 @@ public class TestApp extends Base {
         CartPage cartPage = new CartPage(getDriver());
         boolean isAdded = cartPage.addToCart();
         Assert.assertTrue(isAdded);
+    }
+
+    @Test(priority = 3)
+    public void checkout() {
+        CheckoutPage checkoutPage = new CheckoutPage(getDriver());
+        checkoutPage.navigateToCart();
+        boolean isCompleted = checkoutPage.checkout();
+
+        Assert.assertTrue(isCompleted);
     }
 }
