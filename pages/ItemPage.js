@@ -1,5 +1,3 @@
-import { log } from "console"
-
 class ItemPage {
     constructor(page, context) {
         this.page = page
